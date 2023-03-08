@@ -3,61 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeu de tir</title>
+    <title>Space shooter</title>
 
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body oncontextmenu="return false;">
     <canvas id="game"></canvas>
-
-    <!--MENUS-->
-    <div class="menu connection">
-        <div class="little-menu">
-            <img class="accountImg" src="./images/account.png">
-            <p>Connection</p>
-            <input type="text" id="name-connect" placeholder="Pseudo">
-            <input type="password" id="password-connect" placeholder="Mot de passe">
-            <p class="error" id="error-connect"></p>
-            <button onclick="ConnectToAccount();">Se connecter</button>
-            <span>
-                <button class="bottom-btn" onclick="CreateFakeAccount();">Jouer sans compte</button>
-                <button class="bottom-btn" onclick="OpenMenu('register');">Je n'ai pas de compte</button>
-            </span>
-        </div>
-    </div>
-    <div class="menu register">
-        <div class="little-menu">
-            <img class="accountImg" src="./images/account.png">
-            <p>Créer un compte</p>
-            <input type="text" id="name-register" placeholder="Pseudo">
-            <input type="password" id="password-register" placeholder="Mot de passe">
-            <input type="password" id="password-confirm" placeholder="Confirmer mot de passe">
-            <p class="error" id="error-register"></p>
-            <button onclick="CreateFirebaseAccount();">Créer un compte</button>
-            <span>
-                <button class="bottom-btn" onclick="CreateFakeAccount();">Jouer sans compte</button>
-                <button class="bottom-btn" onclick="OpenMenu('connection');">J'ai déja un compte</button>
-            </span>
-        </div>
-    </div>
-    <div class="menu death">
-        <div class="little-menu">
-            <div>
-                <p>Vous êtes mort</p>
-                <p id="killedby">Tué par: </p>
-            </div>
-            <img src="./images/deathImage.png" alt="image mort">
-            <button onclick="window.location.reload();">Rejouer</button>
-        </div>
-    </div>
-
-    <!--FIREBASE LIB-->
-    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-database-compat.js"></script>
-    <!--SECONDARY SCRIPTS-->
-    <script src="./js/firebase.js"></script>
-    <script src="./js/menu-manager.js"></script>
-    <script src="./js/account.js"></script>
     <!--MAIN SCRIPT-->
     <script src="./js/script.js"></script>
 </body>
